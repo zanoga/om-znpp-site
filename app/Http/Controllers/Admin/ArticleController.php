@@ -104,6 +104,8 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->categories()->detach();
+        $article->delete();
+        return redirect()->route('admin.article.index');
     }
 }
