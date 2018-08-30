@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -25,9 +26,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+              <a class="navbar-brand" href="{{ url('/') }}">
+                  {{ config('app.name', 'Laravel') }}
+              </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,7 +41,7 @@
                         role="button" aria-expanded="false">Блог</a>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="{{route('admin.category.index')}}">Категории</a></li>
-                          <li><a href="#">Фото</a></li>
+                          <li><a href="{{route('admin.article.index')}}">Новости</a></li>
                           <li><a href="#">Комиcсии</a></li>
                         </ul>
                       </li>
