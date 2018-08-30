@@ -1,4 +1,4 @@
-<?php
+-de<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,11 +16,11 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->('slug')->unique();
-            $table->('parent_id')->nullable();
-            $table->('published')->nullable();
-            $table->('created_by')->nullable());
-            $table->('modified_by')->nullable();
+            $table->string('slug')->unique();
+            $table->integer('parent_id')->nullable();
+            $table->tinyInteger('published')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('modified_by')->nullable();
             $table->timestamps();
         });
     }
