@@ -35,14 +35,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    <ul class="nav nav-pills nav-fill">
+                      <li class="nav-item">
+                        <a class="nav-item nav-link" href="{{route('admin.index')}}">Панель состояния</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a href="#" class="nnav-item nav-link dropdown-toggle" data-toggle="dropdown"
                         role="button" aria-expanded="false">Блог</a>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="{{route('admin.category.index')}}">Категории</a></li>
-                          <li><a href="{{route('admin.article.index')}}">Новости</a></li>
-                          <li><a href="#">Комиcсии</a></li>
+                          <li class="nav-item"><a class="nav-item nav-link" href="{{route('admin.category.index')}}">Категории</a></li>
+                          <li class="nav-item"><a class="nav-item nav-link" href="{{route('admin.article.index')}}">Новости</a></li>
                         </ul>
                       </li>
                     </ul>

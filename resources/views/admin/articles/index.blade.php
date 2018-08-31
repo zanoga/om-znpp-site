@@ -8,10 +8,10 @@
       @slot('active') Новости @endslot
     @endcomponent
 
-    <hr>
+    <hr />
 
-    <a href="{{route('admin.article.create')}}" class="btn btn-primary pull-right">
-    <i class="fafa-plus-square-o"></i>Создать новость</a>
+    <a href="{{route('admin.article.create')}}" class="btn btn-primary float-right">
+    <i class="fa fa-plus-square-o"> </i> Создать новость</a>
     <table class="table table-striped">
       <thead>
         <th>Наименование</th>
