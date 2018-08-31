@@ -38,10 +38,12 @@
 
       <div class="col-sm-6">
         <a class="btn btn-block btn-default" href="{{route('admin.article.store')}}">Создать Новость</a>
-        <div class="list-group-item" href="#">
-          <h4 class="list-group-item-heading">Материал первый</h4>
-          <p class="list-group-item-text">Категория</p>
-        </div>
+        @foreach ($articles as $article)
+        <a class="list-group-item" href="{{route('admin.article.edit', $article)}}">
+          <h4 class="list-group-item-heading">{{$article->title}}</h4>
+          <p class="list-group-item-text">{{$article->categories()->pluck('title')->implode(', ')}}</p>
+        </a>
+        @endforeach
       </div>
     </div>
   </div>

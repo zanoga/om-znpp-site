@@ -12,7 +12,8 @@ class DashboadrController extends Controller
     //
     public function dashboard() {
       return view('admin.dashboard', [
-        'categories' => Category::lastCategories(5)
+        'categories' => Category::lastCategories(5),
+        'articles'   => Article::lastArticles(5)
       ]);
     }
 }
